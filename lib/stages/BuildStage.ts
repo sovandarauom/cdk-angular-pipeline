@@ -80,14 +80,14 @@ export class BuildStage {
                 post_build: {
                     commands: [
                         'echo Copy the contents of /dist to S3',
-                        `aws s3 cp --recursive --acl public-read --region ${s3BucketRegion} ./dist s3://${s3Bucket}/`,
+                        `aws s3 cp --recursive --region ${s3BucketRegion} ./dist s3://${s3Bucket}/`,
                         'echo S3 deployment completed on `date`'
                     ]
                 }
             },
             artifacts: {
                 files: ['**/*'],
-                'base-directory': 'dist'
+                'base-directory': 'webapp'
             }
         };
     };

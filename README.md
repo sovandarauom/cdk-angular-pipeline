@@ -16,6 +16,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ## Useful links
 
 * [Create connection with Github](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html)
+* [AWS S3 CP](https://www.middlewareinventory.com/blog/aws-s3-cp-examples-how-to-copy-files-with-s3-cli-devops-junction/)
 
 ## Deployment Steps
 
@@ -42,3 +43,9 @@ export const PipelineConfig: IPipelineConfig = {
     },
 }
 ```
+
+## Screenshots
+
+![pipeline.png](pipeline.png)
+
+![s3.png](s3.png)

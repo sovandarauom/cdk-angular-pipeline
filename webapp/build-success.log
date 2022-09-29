@@ -1,0 +1,174 @@
+[Container] 2022/09/29 03:44:07 going inside waitForAgent
+[Container] 2022/09/29 03:44:07 Waiting for agent ping
+[Container] 2022/09/29 03:44:08 Waiting for DOWNLOAD_SOURCE
+[Container] 2022/09/29 03:44:09 Phase is DOWNLOAD_SOURCE
+[Container] 2022/09/29 03:44:09 finished waitForAgent
+[Container] 2022/09/29 03:44:09 inside CopySrc
+[Container] 2022/09/29 03:44:09 CODEBUILD_SRC_DIR=/codebuild/output/src405418907/src
+[Container] 2022/09/29 03:44:09 finished CopySrc
+[Container] 2022/09/29 03:44:09 YAML location is /codebuild/readonly/buildspec.yml
+[Container] 2022/09/29 03:44:09 No commands found for phase name: install
+[Container] 2022/09/29 03:44:09 Setting HTTP client timeout to higher timeout for S3 source
+[Container] 2022/09/29 03:44:09 Processing environment variables
+[Container] 2022/09/29 03:44:09 Resolved 'nodejs' runtime alias '14.x' to '14'.
+[Container] 2022/09/29 03:44:09 Selecting 'nodejs' runtime version '14' based on manual selections...
+[Container] 2022/09/29 03:44:09 Running command echo "Installing Node.js version 14 ..."
+Installing Node.js version 14 ...
+
+[Container] 2022/09/29 03:44:09 Running command n $NODE_14_VERSION
+     copying : node/14.19.2
+   installed : v14.19.2 (with npm 6.14.17)
+
+[Container] 2022/09/29 03:44:43 Moving to directory /codebuild/output/src405418907/src
+[Container] 2022/09/29 03:44:43 Configuring ssm agent with target id: codebuild:fa6eba1a-5771-4a0b-8890-c4949c872285
+[Container] 2022/09/29 03:44:43 Successfully updated ssm agent configuration
+[Container] 2022/09/29 03:44:43 Registering with agent
+[Container] 2022/09/29 03:44:43 Phases found in YAML: 4
+[Container] 2022/09/29 03:44:43  INSTALL: 0 commands
+[Container] 2022/09/29 03:44:43  PRE_BUILD: 3 commands
+[Container] 2022/09/29 03:44:43  BUILD: 2 commands
+[Container] 2022/09/29 03:44:43  POST_BUILD: 3 commands
+[Container] 2022/09/29 03:44:43 Phase complete: DOWNLOAD_SOURCE State: SUCCEEDED
+[Container] 2022/09/29 03:44:43 Phase context status code:  Message: 
+[Container] 2022/09/29 03:44:43 Entering execCommands
+[Container] 2022/09/29 03:44:43 Entering phase INSTALL
+[Container] 2022/09/29 03:44:43 Phase complete: INSTALL State: SUCCEEDED
+[Container] 2022/09/29 03:44:43 Phase context status code:  Message: 
+[Container] 2022/09/29 03:44:43 Entering phase PRE_BUILD
+[Container] 2022/09/29 03:44:43 Running command cd webapp
+
+[Container] 2022/09/29 03:44:43 Running command echo Installing source NPM dependencies...
+Installing source NPM dependencies...
+
+[Container] 2022/09/29 03:44:43 Running command npm install
+npm WARN read-shrinkwrap This version of npm is compatible with lockfileVersion@1, but package-lock.json was generated for lockfileVersion@2. I'll try to do my best with it!
+
+> nice-napi@1.0.2 install /codebuild/output/src405418907/src/webapp/node_modules/nice-napi
+> node-gyp-build
+
+
+> esbuild@0.15.5 postinstall /codebuild/output/src405418907/src/webapp/node_modules/esbuild
+> node install.js
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-windows-arm64@0.15.5 (node_modules/esbuild-windows-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-windows-arm64@0.15.5: wanted {"os":"win32","arch":"arm64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-windows-64@0.15.5 (node_modules/esbuild-windows-64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-windows-64@0.15.5: wanted {"os":"win32","arch":"x64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-windows-32@0.15.5 (node_modules/esbuild-windows-32):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-windows-32@0.15.5: wanted {"os":"win32","arch":"ia32"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-sunos-64@0.15.5 (node_modules/esbuild-sunos-64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-sunos-64@0.15.5: wanted {"os":"sunos","arch":"x64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-openbsd-64@0.15.5 (node_modules/esbuild-openbsd-64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-openbsd-64@0.15.5: wanted {"os":"openbsd","arch":"x64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-netbsd-64@0.15.5 (node_modules/esbuild-netbsd-64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-netbsd-64@0.15.5: wanted {"os":"netbsd","arch":"x64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-linux-s390x@0.15.5 (node_modules/esbuild-linux-s390x):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-linux-s390x@0.15.5: wanted {"os":"linux","arch":"s390x"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-linux-riscv64@0.15.5 (node_modules/esbuild-linux-riscv64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-linux-riscv64@0.15.5: wanted {"os":"linux","arch":"riscv64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-linux-ppc64le@0.15.5 (node_modules/esbuild-linux-ppc64le):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-linux-ppc64le@0.15.5: wanted {"os":"linux","arch":"ppc64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-linux-mips64le@0.15.5 (node_modules/esbuild-linux-mips64le):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-linux-mips64le@0.15.5: wanted {"os":"linux","arch":"mips64el"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-linux-arm64@0.15.5 (node_modules/esbuild-linux-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-linux-arm64@0.15.5: wanted {"os":"linux","arch":"arm64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-linux-arm@0.15.5 (node_modules/esbuild-linux-arm):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-linux-arm@0.15.5: wanted {"os":"linux","arch":"arm"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-linux-32@0.15.5 (node_modules/esbuild-linux-32):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-linux-32@0.15.5: wanted {"os":"linux","arch":"ia32"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-freebsd-arm64@0.15.5 (node_modules/esbuild-freebsd-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-freebsd-arm64@0.15.5: wanted {"os":"freebsd","arch":"arm64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-freebsd-64@0.15.5 (node_modules/esbuild-freebsd-64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-freebsd-64@0.15.5: wanted {"os":"freebsd","arch":"x64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-darwin-arm64@0.15.5 (node_modules/esbuild-darwin-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-darwin-arm64@0.15.5: wanted {"os":"darwin","arch":"arm64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-darwin-64@0.15.5 (node_modules/esbuild-darwin-64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-darwin-64@0.15.5: wanted {"os":"darwin","arch":"x64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-android-arm64@0.15.5 (node_modules/esbuild-android-arm64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-android-arm64@0.15.5: wanted {"os":"android","arch":"arm64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: esbuild-android-64@0.15.5 (node_modules/esbuild-android-64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for esbuild-android-64@0.15.5: wanted {"os":"android","arch":"x64"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: @esbuild/linux-loong64@0.15.5 (node_modules/@esbuild/linux-loong64):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for @esbuild/linux-loong64@0.15.5: wanted {"os":"linux","arch":"loong64"} (current: {"os":"linux","arch":"x64"})
+
+added 919 packages from 1243 contributors and audited 941 packages in 25.008s
+
+122 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+[Container] 2022/09/29 03:45:09 Phase complete: PRE_BUILD State: SUCCEEDED
+[Container] 2022/09/29 03:45:09 Phase context status code:  Message: 
+[Container] 2022/09/29 03:45:09 Entering phase BUILD
+[Container] 2022/09/29 03:45:09 Running command echo Build started on `date`
+Build started on Thu Sep 29 03:45:09 UTC 2022
+
+[Container] 2022/09/29 03:45:09 Running command npm run build
+
+> webapp@0.0.0 build /codebuild/output/src405418907/src/webapp
+> ng build
+
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial Chunk Files           | Names         |  Raw Size | Estimated Transfer Size
+main.1602516edf406228.js      | main          | 115.91 kB |                34.67 kB
+polyfills.93764f8fd45379ba.js | polyfills     |  33.07 kB |                10.62 kB
+runtime.2ab56e4f659c1314.js   | runtime       |   1.04 kB |               594 bytes
+styles.ef46db3751d8e999.css   | styles        |   0 bytes |                       -
+
+| Initial Total | 150.01 kB |                45.87 kB
+
+Build at: 2022-09-29T03:45:38.011Z - Hash: 43ad4d5d4fd6ec18 - Time: 25240ms
+
+[Container] 2022/09/29 03:45:38 Phase complete: BUILD State: SUCCEEDED
+[Container] 2022/09/29 03:45:38 Phase context status code:  Message: 
+[Container] 2022/09/29 03:45:38 Entering phase POST_BUILD
+[Container] 2022/09/29 03:45:38 Running command echo Copy the contents of /dist to S3
+Copy the contents of /dist to S3
+
+[Container] 2022/09/29 03:45:38 Running command aws s3 cp --recursive --region ap-southeast-1 ./dist s3://cdk-angular-pipeline-webapp/
+Completed 115.9 KiB/164.1 KiB (678.8 KiB/s) with 7 file(s) remaining
+upload: dist/webapp/main.1602516edf406228.js to s3://cdk-angular-pipeline-webapp/webapp/main.1602516edf406228.js
+Completed 115.9 KiB/164.1 KiB (678.8 KiB/s) with 6 file(s) remaining
+Completed 116.4 KiB/164.1 KiB (664.8 KiB/s) with 6 file(s) remaining
+upload: dist/webapp/index.html to s3://cdk-angular-pipeline-webapp/webapp/index.html
+Completed 116.4 KiB/164.1 KiB (664.8 KiB/s) with 5 file(s) remaining
+upload: dist/webapp/styles.ef46db3751d8e999.css to s3://cdk-angular-pipeline-webapp/webapp/styles.ef46db3751d8e999.css
+Completed 116.4 KiB/164.1 KiB (664.8 KiB/s) with 4 file(s) remaining
+Completed 117.5 KiB/164.1 KiB (642.2 KiB/s) with 4 file(s) remaining
+upload: dist/webapp/runtime.2ab56e4f659c1314.js to s3://cdk-angular-pipeline-webapp/webapp/runtime.2ab56e4f659c1314.js
+Completed 117.5 KiB/164.1 KiB (642.2 KiB/s) with 3 file(s) remaining
+Completed 130.1 KiB/164.1 KiB (652.9 KiB/s) with 3 file(s) remaining
+upload: dist/webapp/3rdpartylicenses.txt to s3://cdk-angular-pipeline-webapp/webapp/3rdpartylicenses.txt
+Completed 130.1 KiB/164.1 KiB (652.9 KiB/s) with 2 file(s) remaining
+Completed 131.0 KiB/164.1 KiB (648.5 KiB/s) with 2 file(s) remaining
+upload: dist/webapp/favicon.ico to s3://cdk-angular-pipeline-webapp/webapp/favicon.ico
+Completed 131.0 KiB/164.1 KiB (648.5 KiB/s) with 1 file(s) remaining
+Completed 164.1 KiB/164.1 KiB (784.0 KiB/s) with 1 file(s) remaining
+upload: dist/webapp/polyfills.93764f8fd45379ba.js to s3://cdk-angular-pipeline-webapp/webapp/polyfills.93764f8fd45379ba.js
+
+[Container] 2022/09/29 03:45:48 Running command echo S3 deployment completed on `date`
+S3 deployment completed on Thu Sep 29 03:45:48 UTC 2022
+
+[Container] 2022/09/29 03:45:48 Phase complete: POST_BUILD State: SUCCEEDED
+[Container] 2022/09/29 03:45:48 Phase context status code:  Message: 
+[Container] 2022/09/29 03:45:48 exiting execCommands
+[Container] 2022/09/29 03:45:48 Expanding base directory path: webapp
+[Container] 2022/09/29 03:45:48 Assembling file list
+[Container] 2022/09/29 03:45:48 Expanding webapp
+[Container] 2022/09/29 03:45:48 Expanding file paths for base directory webapp
+[Container] 2022/09/29 03:45:48 Assembling file list
+[Container] 2022/09/29 03:45:48 Expanding **/*
+[Container] 2022/09/29 03:45:49 Found 40445 file(s)
+[Container] 2022/09/29 03:46:00 Phase complete: UPLOAD_ARTIFACTS State: SUCCEEDED
+[Container] 2022/09/29 03:46:00 Phase context status code:  Message: 
